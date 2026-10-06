@@ -1,0 +1,11 @@
+### 
+
+@baseUrl = http://localhost:8080
+
+POST {{baseUrl}}/auth/register HTTP/1.1
+Accept: application/json
+
+{
+  "password": "habab",
+  "username": "habab"
+}
