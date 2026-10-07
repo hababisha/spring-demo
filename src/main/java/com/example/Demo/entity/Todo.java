@@ -1,5 +1,6 @@
 package com.example.Demo.entity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
 @Entity
@@ -7,10 +8,14 @@ public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Unique ID of the todo", example = "1")
+
     private Long id;
 
+    @Schema(description = "Title of the todo", example = "Learn Spring Boot")
     private String title;
 
+    @Schema(description = "whether or not the todo has been completed", example = "true/false")
     private boolean completed;
 
     @ManyToOne

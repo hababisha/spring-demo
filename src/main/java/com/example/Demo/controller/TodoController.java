@@ -5,10 +5,13 @@ import com.example.Demo.service.TodoService;
 
 import org.springframework.web.bind.annotation.*;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/todos")
+@SecurityRequirement(name = "bearerAuth")
 public class TodoController {
 
     private final TodoService todoService;
